@@ -70,7 +70,7 @@ public class Fecha {
         dia = Integer.parseInt(sDia);
         
         //proceso el mes
-        String sMes = s.substring(pos1, pos2);
+        String sMes = s.substring(pos1+1, pos2);
         mes = Integer.parseInt(sMes);
         
         //proceso el anio
