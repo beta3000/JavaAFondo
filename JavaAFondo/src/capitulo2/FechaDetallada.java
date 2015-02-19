@@ -8,6 +8,14 @@ public class FechaDetallada extends Fecha{
         super(f);
     }
     
+    public FechaDetallada(int dia, int mes, int anio){
+        super(dia, mes, dia);
+    }
+    
+    public  FechaDetallada(){
+        super();
+    }
+    
     private static String meses[] = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
     
     public String toString(){
