@@ -1,6 +1,6 @@
 package capitulo2.colecciones;
 
-public class MiColeccion {
+public class MiColeccion<T> {
     
     private Object datos[] = null;
     private int len = 0;
@@ -11,8 +11,8 @@ public class MiColeccion {
     }
     
     //retarna el i-esimo elemento de la coleccion
-    public Object obtener(int i){
-        return datos[i];
+    public T obtener(int i){
+        return (T)datos[i];
     }
     
     //indica cuantos elementos tiene la coleccion
@@ -20,7 +20,7 @@ public class MiColeccion {
         return len;
     }
     
-    public void insertar(Object elm, int i){
+    public void insertar(T elm, int i){
         
         if(len == datos.length){
             Object aux[] = datos;
@@ -39,7 +39,7 @@ public class MiColeccion {
         len++;
     }
     
-    public int buscar(Object elm){
+    public int buscar(T elm){
         int i = 0;
         
         //mientras no me pase del tope y mientras no encuentre.....
@@ -48,11 +48,11 @@ public class MiColeccion {
             return i<len ? i: -1;   
     }
     
-    public void agregar(Object elm){
+    public void agregar(T elm){
         insertar(elm, len);
     }
     
-    public Object eliminar(int i){
+    public T eliminar(int i){
         Object aux = datos[i];
         for (int j = i; j < len-1; j++) {
             datos[j] = datos[j+1];
@@ -60,6 +60,6 @@ public class MiColeccion {
         
         len--;
         
-        return aux;
+        return (T)aux;
     }
 }

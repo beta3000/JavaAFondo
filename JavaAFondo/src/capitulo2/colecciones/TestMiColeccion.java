@@ -10,7 +10,7 @@ public class TestMiColeccion {
         Scanner scanner = new Scanner(System.in);
         
         //creo una coleccion con capacidad inicial = 5
-        MiColeccion mc = new MiColeccion(5);
+        MiColeccion<String> mc = new MiColeccion<String>(5);
         
         //leo el primer nombre
         System.out.println("Ingrese nombre: ");
@@ -30,9 +30,11 @@ public class TestMiColeccion {
         for (int i = 0; i < mc.cantidad(); i++) {
             //el metodo obtener retorna un object entonces
             //entonces tengo que castear a String
-            aux = (String) mc.obtener(i);
+            aux = mc.obtener(i);
             
             System.out.println(aux +" - "+aux.length()+" caracteres");
         }
+        
+        System.out.println("Cantidad: "+mc.cantidad());
     }
 }
