@@ -35,7 +35,7 @@ public class Alumno implements Comparable<Alumno>{
     }
 
     public int getEdad() {
-        return edad;
+        return edad;  
     }
 
     public void setEdad(int edad) {
