@@ -1,0 +1,21 @@
+package capitulo2.interfaces.criterios;
+
+import capitulo2.interfaces.Alumno;
+
+/**
+ * @author G4m[@]
+ */
+public class TestCriterio {
+
+    public static void main(String[] args) {
+        Alumno arr[] ={new Alumno("Martin", 25, 7.2),
+                       new Alumno("Carlos", 23, 5.1),
+                       new Alumno("Anastasio", 20, 4.8)};
+        
+        Util.ordenar(arr, new CriterioAlumNombre());
+        Util.imprimir(arr);
+        
+        Util.ordenar(arr, new CriterioAlumNotaProm());
+        Util.imprimir(arr);
+    }
+}
